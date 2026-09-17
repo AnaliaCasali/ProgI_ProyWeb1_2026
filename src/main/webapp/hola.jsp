@@ -1,5 +1,6 @@
 <%@ page contentType="text/html" language="java" %>
 <%@ page isELIgnored="false" %> .
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
 <html>
 <body>

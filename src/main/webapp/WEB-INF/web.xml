@@ -12,7 +12,7 @@
 <!-- Configurar servlets -->
 <servlet>
   <servlet-name>HelloServlet</servlet-name>
-  <servlet-class>org.ies63.progi.HelloServlet</servlet-class>
+  <servlet-class>org.ies63.progi.servlets.HelloServlet</servlet-class>
 </servlet>
 <servlet-mapping>
   <servlet-name>HelloServlet</servlet-name>

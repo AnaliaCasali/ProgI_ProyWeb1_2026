@@ -1,4 +1,4 @@
-package org.ies63.progi;
+package org.ies63.progi.servlets;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -17,7 +17,6 @@ public class HelloServlet extends HttpServlet {
       req.setAttribute("mensaje","Bienvenido a mi primer servlet");
       req.setAttribute("fecha",  LocalDate.now().toString());
     req.setAttribute("fecha2","otro");
-
     RequestDispatcher rd= req.getRequestDispatcher("hola.jsp");
     rd.forward(req,resp);
 
