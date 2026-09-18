@@ -4,7 +4,9 @@
 <h2>Hello World!</h2>
 
 <a href="hola"> Ir a la pagina Hola</a>
+
 <br><a href="listadoEmpleados.jsp"> Listado de Empleados</a>
+<br><a href="empleados"> Listado de Empleados via servlet</a>
 
 </body>
 
