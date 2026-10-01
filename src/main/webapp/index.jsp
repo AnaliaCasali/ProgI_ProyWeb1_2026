@@ -7,6 +7,7 @@
 
 <br><a href="listadoEmpleados.jsp"> Listado de Empleados</a>
 <br><a href="empleados"> Listado de Empleados via servlet</a>
+<br><a href="empleados?accion=nuevo"> Formulario Empleado</a>
 
 </body>
 
