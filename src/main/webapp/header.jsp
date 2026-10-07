@@ -10,6 +10,8 @@
     <!-- el titulo llega como parametro del jsp:include -->
     <title>${empty param.titulo ? 'ProgI Proyecto Web' : param.titulo}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -41,19 +43,20 @@
             </ul>
 
             <!-- busca el atributo usuario en la sesion (lo guarda LoginServlet) -->
-            <!--<c:choose>
+            <c:choose>
                 <c:when test="${not empty sessionScope.usuario}">
                     <span class="navbar-text me-3">
                         Usuario: <strong><c:out value="${sessionScope.usuario.nombre}"/></strong>
+                        <c:out value="${sessionScope.mensaje}"/>
                     </span>
                     <a class="btn btn-outline-light btn-sm"
-                       href="${pageContext.request.contextPath}/login?accion=salir">Salir</a>
+                       href="${pageContext.request.contextPath}/login?accion=salir">Cerrar Sesión</a>
                 </c:when>
                 <c:otherwise>
                     <span class="navbar-text me-3">Invitado</span>
                     <a class="btn btn-outline-light btn-sm" href="${pageContext.request.contextPath}/login">Ingresar</a>
                 </c:otherwise>
-            </c:choose>-->
+            </c:choose>
         </div>
     </div>
 </nav>

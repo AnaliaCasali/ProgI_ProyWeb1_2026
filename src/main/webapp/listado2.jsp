@@ -1,16 +1,15 @@
-<%@ page contentType="text/html" language="java" %>
 <%@ page isELIgnored="false" %> .
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java"%>
 
-<!doctype html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Listado de Empleados</title>
-</head>
-<body>
+<jsp:include page="header.jsp">
+    <jsp:param name="titulo" value="Inicio"/>
+</jsp:include>
+
+
 <h1>Listado de Empleados</h1>
+
+<c:if test="${!empty sessionScope.usuario}">
 
 <table>
     <thead>
@@ -29,8 +28,13 @@
             <td>${emp.nombre}</td>
             <td>${emp.apellido}</td>
             <td>${emp.salarioBase}</td> <!--si no tiene extension jsp antes de ? va al servlet-->
-            <td>  <a href="${pageContext.request.contextPath}/empleados?accion=editar&id=${emp.id}">Editar </a> </td>
-            <td>  <a href="${pageContext.request.contextPath}/empleados?accion=borrar&id=${emp.id}">Borrar </a> </td>
+         <!--   <td><img src="https://ies63lastoscas.edu.ar/assets/imagenes/c5ae74ab1b4fa9285966da79b3f03dfb.png">  </td>-->
+            <td>  <a href="${pageContext.request.contextPath}/empleados?accion=editar&id=${emp.id}">
+                <i class="bi bi-pencil-fill"></i>
+            </a> </td>
+            <td>  <a href="${pageContext.request.contextPath}/empleados?accion=borrar&id=${emp.id}">
+                <i class="bi bi-trash"></i>
+            </a> </td>
         </tr>
       </c:forEach>
 
@@ -43,7 +47,10 @@
     </tbody>
 </table>
 
+
 <a href="${pageContext.request.contextPath}/empleados?accion=nuevo">Agregar Nuevo Empleado </a>
 
-</body>
-</html>
+</c:if>
+
+</main>
+<jsp:include page="footer.jsp"/>

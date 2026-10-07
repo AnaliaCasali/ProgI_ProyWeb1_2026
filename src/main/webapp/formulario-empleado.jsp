@@ -1,16 +1,12 @@
-<%@ page contentType="text/html" language="java" %>
 <%@ page isELIgnored="false" %> .
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java"%>
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Formulario de Empleado</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
+<jsp:include page="header.jsp">
+    <jsp:param name="titulo" value="Inicio"/>
+</jsp:include>
+
+
 <h1>
     <!-- atrapa la variable de la request que se llama empleado -->
 ${not empty empleado? 'Editando empleado' : 'Agregando Nuevo Empleado '}
@@ -50,6 +46,5 @@ ${not empty empleado? 'Editando empleado' : 'Agregando Nuevo Empleado '}
 
     </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>
+
+<jsp:include page="footer.jsp"/>
